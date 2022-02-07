@@ -1,0 +1,11 @@
+INSERT INTO users (id, first_name, last_name, handle, birthday, created_at, updated_at)
+VALUES(6, "Michael", "Jordan", "MJ", "1963-02-17", NOW(), NOW());
+
+SELECT * 
+FROM tweets
+
+UPDATE users SET first_name = 'MJ'
+WHERE (id = '6');
+
+DELETE FROM users
+WHERE id = '6';

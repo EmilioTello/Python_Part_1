@@ -1,0 +1,21 @@
+USE books_schema;
+INSERT INTO authors (name) VALUES ('Jane Austen'),('Emily Dickinson'),('Fyodor Dostoevsky'),('William Shakespeare'),('Lau Tzu');
+SELECT * FROM authors;
+DELETE FROM authors WHERE id = 1;
+DELETE FROM authors WHERE id = 2;
+DELETE FROM authors WHERE id = 3;
+DELETE FROM authors WHERE id = 4;
+DELETE FROM authors WHERE id = 5;
+INSERT INTO books (title) VALUES ('C Sharp'),('Java'),('Python'),('PHP'),('Ruby');
+SELECT * FROM books;
+UPDATE books SET title = 'C#' WHERE id = 1;
+UPDATE authors SET name = 'Bill Shakespeare' WHERE id = 9;
+SELECT * FROM favorites;
+INSERT INTO favorites (author_id, book_id) VALUES (6,1), (6,2), (7,1), (7,2), (7,3), (8,1), (8,2), (8,3), (8,4), (9,1), (9,2), (9,3), (9,4), (9,5);
+SELECT * FROM authors JOIN favorites ON authors.id = favorites.author_id JOIN books ON books.id = favorites.book_id WHERE book_id = 3;
+DELETE FROM favorites WHERE author_id = 7 AND book_id = 3;
+INSERT INTO favorites (author_id, book_id) VALUES (10, 2);
+SELECT * FROM authors JOIN favorites ON authors.id = favorites.author_id JOIN books ON books.id = favorites.book_id WHERE book_id = 2;
+SELECT * FROM books JOIN favorites ON books.id = favorites.book_id JOIN authors ON authors.id = favorites.author_id WHERE author_id = 8;
+SELECT * FROM authors JOIN favorites ON authors.id = favorites.author_id JOIN books ON books.id = favorites.book_id WHERE book_id = 5;
+

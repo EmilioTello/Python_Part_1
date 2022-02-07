@@ -1,0 +1,17 @@
+USE dojos_and_ninjas_schema;
+INSERT INTO dojos (name) VALUES ('Miyagi'), ('Aikido Ai'), ('Taekwondojo');
+SELECT * FROM dojos;
+DELETE FROM dojos WHERE id = 1;
+DELETE FROM dojos WHERE id = 2;
+DELETE FROM dojos WHERE id = 3;
+INSERT INTO dojos (name) VALUES ('Daniel Do'), ('Kick Dojo'), ('Punch Dojo');
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('Ricky', 'Ricardo', 42, 4), ('Fred', 'Mertz', 48, 4), ('Lucy', 'Ricardo', 38, 4);
+SELECT * FROM ninjas;
+DELETE FROM ninjas WHERE id = 4;
+DELETE FROM ninjas WHERE id = 5;
+DELETE FROM ninjas WHERE id = 6;
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('Al', 'Pacino', 42, 5), ('Rick', 'Ross', 39, 5), ('Oscar', 'De La Hoya', 48, 5);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('Ron', 'Carter', 84, 6), ('Ron', 'Eschete', 73, 6), ('Joe', 'Satriani', 65, 6);
+SELECT * FROM ninjas WHERE dojo_id = 4;
+SELECT * FROM ninjas WHERE dojo_id = 6;
+SELECT * FROM dojos WHERE id = 6;

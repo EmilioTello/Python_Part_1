@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="static/foundation.css">
+</head>
+<body>
+    <h1>Counter</h1>
+    <p>{{session['count']}} time(s)</p>
+    <a href="/addtwo">Add 2</a>
+    <a href="/destroy">Reset</a>
+
+    <form action='/addany' method='post'>
+        <label for='number'>Increment:</label>
+        <input type='number' name='number'>
+    </form>
+</body>
+</html>

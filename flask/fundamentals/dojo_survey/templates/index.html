@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="static/css/foundation.css">
+</head>
+<body>
+    <h1>Dojo Survey</h1>
+    <form action='/process', method='POST'>
+        <div>
+            <label for='name'>Your Name: </label>
+            <input type="text" name='name'>
+        </div>
+        <div>
+            <label for='location'>Dojo Jocation: </label>
+            <select name= 'location'>
+                <option>Bellevue</option>
+                <option>Boise</option>
+                <option>Chicago</option>
+                <option>Los Angeles</option>
+                <option>Silicon Valley</option>
+            </select>
+        </div>
+        <div>
+            <label for='language'>Favorite Language: </label>
+            <select name= 'language'>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>Javascript</option>
+                <option>Python</option>
+                <option>C#</option>
+            </select>
+        </div>
+        <h5>Which One?</h5>
+        <div>
+            <input type='radio' name='choice' value='This' id='This' checked>
+            <label for='This'>This<label>
+        </div>
+        <div>
+            <input type='radio' name='choice' value='That' id='=That'>
+            <label for='That'>That<label>
+        </div>
+        <h5>Would you like to...</h5>
+        <div>
+            <input type='checkbox' name='accept' id='accept'>
+            <label for='accept'>Go Into Turbo Mode?<label>
+        </div>
+        <div>
+            <label for='comments'>Comments:</label>
+        </div>
+        <div>
+            <textarea name='comments' cols="40" rows="10">
+            </textarea>
+        </div>
+        <div>
+            <input type="submit" value="Button">
+        </div>
+    </form>
+    
+    
+</body>
+</html>
